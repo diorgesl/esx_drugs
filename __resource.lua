@@ -6,8 +6,8 @@ version '1.0.3'
 
 server_scripts {
 	'@es_extended/locale.lua',
-	'config.lua',
 	'locales/br.lua',
+	'config.lua',
 	'server/server.lua',
 }
 

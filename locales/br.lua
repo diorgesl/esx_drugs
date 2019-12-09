@@ -3,7 +3,6 @@ Locales['br'] = {
 	['meth'] = 'Metanfetamina',
 	['opium'] = 'Heroína',
 	['coke'] = 'Cocaína',
-	['carbono'] = 'Carbono',
 	['press_collect'] = 'Pressione ~INPUT_CONTEXT~ para coletar ~r~%s~s~ ',
 	['press_process'] = 'Pressione ~INPUT_CONTEXT~ para processar ~r~%s~s~',
 	['press_sell'] = 'Pressione ~INPUT_CONTEXT~ para vender ~r~%s~s~',
