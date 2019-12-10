@@ -1,5 +1,5 @@
 ALTER TABLE `items`
-	ADD COLUMN `limit` INT NULL DEFAULT 0 AFTER `label`,
+	ADD COLUMN `limit` INT NULL DEFAULT 0 AFTER `label`
 ;
 
 INSERT INTO `items` (name, label, `limit`) VALUES
