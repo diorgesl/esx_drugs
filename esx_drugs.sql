@@ -1,3 +1,7 @@
+ALTER TABLE `items`
+	ADD COLUMN `limit` INT NULL DEFAULT 0 AFTER `label`,
+;
+
 INSERT INTO `items` (name, label, `limit`) VALUES
 	('weed', 'Weed (1G)', 420),
 	('weed_pooch', 'Bag of weed (28G)', 15),
