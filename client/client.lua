@@ -134,6 +134,8 @@ Citizen.CreateThread(function()
 							FreezeEntityPosition(NPCs[k], true)
 							TaskStartScenarioInPlace(NPCs[k], "WORLD_HUMAN_SMOKING", 0, true);
 						end
+					else
+						DrawMarker(Config.MarkerType, j.x, j.y, j.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.ZoneSize.x, Config.ZoneSize.y, Config.ZoneSize.z, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, false, false, false, false)
 					end
 				end
 			end
