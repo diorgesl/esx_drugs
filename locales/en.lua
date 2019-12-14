@@ -19,6 +19,7 @@ Locales['en'] = {
 	['exit_marker'] = 'Press ~INPUT_CONTEXT~ to cancel the ~y~progress.',
 	['foot_work'] = 'You must be on your feet to work.',
 	['act_call_police'] = ':REPORT: Suspected tramp doing illegal things!',
+	['stop_action'] = 'Press ~g~[%s]~w~ to stop.',
 	
 	-- Blips
 	['field'] = '%s Field',

@@ -37,6 +37,11 @@ Citizen.CreateThread(function()
 	end
 end)
 
+RegisterNetEvent('esx:setJob')
+AddEventHandler('esx:setJob', function(job)
+	myJob = job.name
+end)
+
 AddEventHandler('esx_drugs:hasEnteredMarker', function(zone)
 	if myJob == 'police' or myJob == 'ambulance' then
 		return
@@ -232,6 +237,7 @@ Citizen.CreateThread(function()
 				if IsPedInAnyVehicle(GetPlayerPed(-1), 0) then
 					TriggerEvent('esx:showNotification', _U('foot_work'))
 				elseif action[2] == "Field" then
+					ESX.ShowHelpNotification(_U('stop_action', Config.KeyStopAction))
 					TriggerServerEvent('esx_drugs:startHarvest', action[1])
 					TaskStartScenarioInPlace(playerPed, 'world_human_gardener_plant', 0, false)
 					callPolice(cops.AlertCops, cops.Zones[action[2]].callPolice, PlayerCoords)
@@ -246,6 +252,8 @@ Citizen.CreateThread(function()
 				end
 				CurrentAction = nil
 			end
+		elseif CurrentAction == nil and IsControlJustReleased(0, Keys[Config.KeyStopAction]) then
+			TriggerEvent('esx_drugs:hasExitedMarker', lastZone)
 		end
 	end
 end)

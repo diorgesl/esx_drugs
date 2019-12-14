@@ -19,6 +19,7 @@ Locales['br'] = {
 	['exit_marker'] = 'Pressione ~INPUT_CONTEXT~ para cancelar o ~y~processo',
 	['foot_work'] = 'Você deve estar a pé para poder trabalhar.',
 	['act_call_police'] = ':DENUNCIA: Suspeita de vagabundo fazendo coisas ilegais!',
+	['stop_action'] = 'Pressione ~g~[%s]~w~ para parar.',
 	
 	-- Blips
 	['field'] = 'Campo de %s',
