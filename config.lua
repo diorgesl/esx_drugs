@@ -29,9 +29,10 @@ Config.Drugs = {
 			-- Processing: Process location
 			-- Dealer: Seller location
 			-- callPolice: true/false, call the police in the position?
-			Field 			= {x = 2225.93,	y = 5576.79,	z = 53.96-1.0001,	name = _U('field', _U('weed')),			sprite = 496,	color = 52, callPolice = false},
-			Processing 		= {x = 1035.94,	y = -3205.76,	z = -38.17-1.0001,	name = _U('processing', _U('weed')),	sprite = 496,	color = 52, callPolice = false},
-			--Dealer 		= {x = 478.27,	y = -3369.85,	z = 6.07-1.0001, h = 45.24,	name = _U('dealer', _U('weed')),		sprite = 500,	color = 75, callPolice = false, NPCHash = 653210662},
+			-- callPoliceChance: chance in percentage to call the police
+			Field 			= {x = 2225.93,	y = 5576.79,	z = 53.96-1.0001,	name = _U('field', _U('weed')),			sprite = 496,	color = 52, callPolice = false, callPoliceChance = 100},
+			Processing 		= {x = 1035.94,	y = -3205.76,	z = -38.17-1.0001,	name = _U('processing', _U('weed')),	sprite = 496,	color = 52, callPolice = false, callPoliceChance = 100},
+			--Dealer 		= {x = 478.27,	y = -3369.85,	z = 6.07-1.0001, h = 45.24,	name = _U('dealer', _U('weed')),		sprite = 500,	color = 75, callPolice = false, callPoliceChance = 100, NPCHash = 653210662},
 		}
 	},
 	-- Translated name
@@ -52,9 +53,10 @@ Config.Drugs = {
 			-- Processing: Process location
 			-- Dealer: Seller location
 			-- callPolice: true/false, call the police in the position?
-			Field 			= {x = 1525.29,	y = 1710.02,	z = 109.00,	        name = _U('field', _U('meth')),			sprite = 499,	color = 26, callPolice = false},
-			Processing 		= {x = 1004.7,	y = -3200.24,	z = -38.99-1.0001,	name = _U('processing', _U('meth')),	sprite = 499,	color = 26, callPolice = false},
-			--Dealer 		= {x = 999.04,	y = -3200.39,	z = -38.99-1.0001, h = 45.24,	name = _U('dealer', _U('meth')),		sprite = 500,	color = 75, callPolice = false, NPCHash = 653210662},
+			-- callPoliceChance: chance in percentage to call the police
+			Field 			= {x = 1525.29,	y = 1710.02,	z = 109.00,	        name = _U('field', _U('meth')),			sprite = 499,	color = 26, callPolice = false, callPoliceChance = 100},
+			Processing 		= {x = 1004.7,	y = -3200.24,	z = -38.99-1.0001,	name = _U('processing', _U('meth')),	sprite = 499,	color = 26, callPolice = false, callPoliceChance = 100},
+			--Dealer 		= {x = 999.04,	y = -3200.39,	z = -38.99-1.0001, h = 45.24,	name = _U('dealer', _U('meth')),		sprite = 500,	color = 75, callPolice = false, callPoliceChance = 100, NPCHash = 653210662},
 		}
 	},
 	-- Translated name
@@ -75,9 +77,10 @@ Config.Drugs = {
 			-- Processing: Process location
 			-- Dealer: Seller location
 			-- callPolice: true/false, call the police in the position?
-			Field 			= {x = 1972.78,	y = 3819.39,	z = 32.50,	        name = _U('field', _U('opium')),		sprite = 51,	color = 60, callPolice = false},
-			Processing 		= {x = 98.0,		y = -1290.48,   z = 29.27,		name = _U('processing', _U('opium')),	sprite = 51,	color = 60, callPolice = false},
-			--Dealer 	= {x = 1100.95,	y = -3198.49,	z = 38.99-1.0001, h = 45.24,	name = _U('opium_dealer', _U('opium')),	sprite = 500,	color = 75, callPolice = false, NPCHash = 653210662},
+			-- callPoliceChance: chance in percentage to call the police
+			Field 			= {x = 1972.78,	y = 3819.39,	z = 32.50,	        name = _U('field', _U('opium')),		sprite = 51,	color = 60, callPolice = false, callPoliceChance = 100},
+			Processing 		= {x = 98.0,		y = -1290.48,   z = 29.27,		name = _U('processing', _U('opium')),	sprite = 51,	color = 60, callPolice = false, callPoliceChance = 100},
+			--Dealer 	= {x = 1100.95,	y = -3198.49,	z = 38.99-1.0001, h = 45.24,	name = _U('opium_dealer', _U('opium')),	sprite = 500,	color = 75, callPolice = false, callPoliceChance = 100, NPCHash = 653210662},
 		}
 	},
 	-- Translated name
@@ -98,9 +101,10 @@ Config.Drugs = {
 			-- Processing: Process location
 			-- Dealer: Seller location
 			-- callPolice: true/false, call the police in the position?
-			Field 			= {x = 2524.57,	y = -1843.93,	z = 41.33-1.0001,	name = _U('field', _U('coke')),			sprite = 501,	color = 40, callPolice = false},
-			Processing 		= {x = 1100.61,	y = -3194.43,	z = -38.99-1.0001,	name = _U('processing', _U('coke')),	sprite = 478,	color = 40, callPolice = false},
-			--Dealer 			= {x = 1124.14,	y = -3151.38,   z = -37.06-1.0001, h = 45.24,	name = _U('dealer', _U('coke')),		sprite = 500,	color = 75, callPolice = false, NPCHash = 653210662}
+			-- callPoliceChance: chance in percentage to call the police
+			Field 			= {x = 2524.57,	y = -1843.93,	z = 41.33-1.0001,	name = _U('field', _U('coke')),			sprite = 501,	color = 40, callPolice = false, callPoliceChance = 100},
+			Processing 		= {x = 1100.61,	y = -3194.43,	z = -38.99-1.0001,	name = _U('processing', _U('coke')),	sprite = 478,	color = 40, callPolice = false, callPoliceChance = 100},
+			--Dealer 			= {x = 1124.14,	y = -3151.38,   z = -37.06-1.0001, h = 45.24,	name = _U('dealer', _U('coke')),		sprite = 500,	color = 75, callPolice = false, callPoliceChance = 100, NPCHash = 653210662}
 		}
 	}
 }

@@ -199,11 +199,14 @@ Citizen.CreateThread(function()
 	end
 end)
 
-function callPolice(call1, call2, pos)
+function callPolice(call1, call2, chance, pos)
 	if call1 and call2 then
-		TriggerServerEvent('esx_addons_gcphone:startCall', 'police', _U('act_call_police'), pos, {
-			pos = { x = pos.x, y = pos.y, z = pos.z },
-		})
+		local can = math.random(0, 100)
+		if can <= chance then
+			TriggerServerEvent('esx_addons_gcphone:startCall', 'police', _U('act_call_police'), pos, {
+				pos = { x = pos.x, y = pos.y, z = pos.z },
+			})
+		end
 	end
 end
 
@@ -240,13 +243,13 @@ Citizen.CreateThread(function()
 					ESX.ShowHelpNotification(_U('stop_action', Config.KeyStopAction))
 					TriggerServerEvent('esx_drugs:startHarvest', action[1])
 					TaskStartScenarioInPlace(playerPed, 'world_human_gardener_plant', 0, false)
-					callPolice(cops.AlertCops, cops.Zones[action[2]].callPolice, PlayerCoords)
+					callPolice(cops.AlertCops, cops.Zones[action[2]].callPolice, cops.Zones[action[2]].callPoliceChance, PlayerCoords)
 				elseif action[2] == "Processing" then
 					TriggerServerEvent('esx_drugs:startTransform', action[1])
-					callPolice(cops.AlertCops, cops.Zones[action[2]].callPolice, PlayerCoords)
+					callPolice(cops.AlertCops, cops.Zones[action[2]].callPolice, cops.Zones[action[2]].callPoliceChance, PlayerCoords)
 				elseif action[2] == "Dealer" then
 					TriggerServerEvent('esx_drugs:startSell', action[1])
-					callPolice(cops.AlertCops, cops.Zones[action[2]].callPolice, PlayerCoords)
+					callPolice(cops.AlertCops, cops.Zones[action[2]].callPolice, cops.Zones[action[2]].callPoliceChance, PlayerCoords)
 				else
 					isInZone = false
 				end
