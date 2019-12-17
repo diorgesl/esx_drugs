@@ -76,6 +76,7 @@ AddEventHandler('esx_drugs:hasEnteredMarker', function(zone)
 	end
 end)
 
+RegisterNetEvent('esx_drugs:hasExitedMarker')
 AddEventHandler('esx_drugs:hasExitedMarker', function(zone)
 	CurrentAction = nil
 	ESX.UI.Menu.CloseAll()

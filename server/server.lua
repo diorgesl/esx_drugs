@@ -31,11 +31,17 @@ local function Harvest(source, drug)
 		if PlayersHarvesting[source] == true and Drug[source] == drug then
 			local xPlayer  = ESX.GetPlayerFromId(source)
 			local item = xPlayer.getInventoryItem(v.Item)
-			if item.limit ~= -1 and item.count >= item.limit then
-				TriggerClientEvent('esx:showNotification', source, _U('inv_full'))
+			local qtd = math.random(1,10)
+			if xPlayer.canCarryItem(v.Item, qtd) then
+				if item.limit ~= -1 and item.count >= item.limit then
+					TriggerClientEvent('esx:showNotification', source, _U('inv_full'))
+				else
+					xPlayer.addInventoryItem(v.Item, qtd)
+					Harvest(source, drug)
+				end
 			else
-				xPlayer.addInventoryItem(v.Item, math.random(1,10))
-				Harvest(source, drug)
+				TriggerClientEvent('esx_drugs:hasExitedMarker')
+				TriggerClientEvent('esx:showNotification', source, _U('inv_full'))
 			end
 		end
 	end)
@@ -116,25 +122,8 @@ local function Sell(source, drug)
 				TriggerClientEvent('esx:showNotification', source, _U('not_enough', drug))
 			else
 				xPlayer.removeInventoryItem(v.ItemTransform, 1)
-				if CopsConnected == 0 then
-					xPlayer.addAccountMoney('black_money', math.random(200,300))
-					TriggerClientEvent('esx:showNotification', source, _U('sold_one', drug))
-				elseif CopsConnected == 1 then
-					xPlayer.addAccountMoney('black_money', math.random(300,400))
-					TriggerClientEvent('esx:showNotification', source, _U('sold_one', drug))
-				elseif CopsConnected == 2 then
-					xPlayer.addAccountMoney('black_money', math.random(350,500))
-					TriggerClientEvent('esx:showNotification', source, _U('sold_one', drug))
-				elseif CopsConnected == 3 then
-					xPlayer.addAccountMoney('black_money', math.random(400,550))
-					TriggerClientEvent('esx:showNotification', source, _U('sold_one', drug))
-				elseif CopsConnected == 4 then
-					xPlayer.addAccountMoney('black_money', math.random(450,600))
-					TriggerClientEvent('esx:showNotification', source, _U('sold_one', drug))
-				elseif CopsConnected >= 5 then
-					xPlayer.addAccountMoney('black_money', math.random(550,700))
-					TriggerClientEvent('esx:showNotification', source, _U('sold_one', drug))
-				end
+				xPlayer.addAccountMoney('black_money', math.random( v.Zones.Dealer.multiplierPolice and v.Zones.Dealer.sellMin * CopsConnected or v.Zones.Dealer.sellMin, v.Zones.Dealer.multiplierPolice and v.Zones.Dealer.sellMax * CopsConnected or v.Zones.Dealer.sellMax))
+				TriggerClientEvent('esx:showNotification', source, _U('sold_one', drug))
 				Sell(source, drug)
 			end
 
