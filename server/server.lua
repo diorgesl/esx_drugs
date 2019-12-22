@@ -33,12 +33,8 @@ local function Harvest(source, drug)
 			local item = xPlayer.getInventoryItem(v.Item)
 			local qtd = math.random(1,10)
 			if xPlayer.canCarryItem(v.Item, qtd) then
-				if item.limit ~= -1 and item.count >= item.limit then
-					TriggerClientEvent('esx:showNotification', source, _U('inv_full'))
-				else
-					xPlayer.addInventoryItem(v.Item, qtd)
-					Harvest(source, drug)
-				end
+				xPlayer.addInventoryItem(v.Item, qtd)
+				Harvest(source, drug)
 			else
 				TriggerClientEvent('esx_drugs:hasExitedMarker')
 				TriggerClientEvent('esx:showNotification', source, _U('inv_full'))
