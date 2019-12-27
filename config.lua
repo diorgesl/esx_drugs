@@ -87,9 +87,9 @@ Config.Drugs = {
 			-- sellMin: Min receveid by selling
 			-- sellMax: Max received by selling
 			-- multiplierPolice: true/false Multiply the min/max based on cops online
-			Field 			= {x = 1972.78,	y = 3819.39,	z = 32.50,	        name = _U('field', _U('opium')),		sprite = 51,	color = 60, callPolice = false, callPoliceChance = 100},
-			Processing 		= {x = 98.0,		y = -1290.48,   z = 29.27,		name = _U('processing', _U('opium')),	sprite = 51,	color = 60, callPolice = false, callPoliceChance = 100},
-			--Dealer 	= {x = 1100.95,	y = -3198.49,	z = 38.99-1.0001, h = 45.24,	name = _U('opium_dealer', _U('opium')),	sprite = 500,	color = 75, callPolice = false, callPoliceChance = 100, NPCHash = 653210662, sellMin = 200, sellMax = 500, multiplierPolice = true},
+			Field 			= {x = 1972.78,	y = 3819.39, z = 32.50,	name = _U('field', _U('opium')), sprite = 51, color = 60, callPolice = false, callPoliceChance = 100},
+			Processing 		= {x = 98.0, y = -1290.48, z = 29.27,	name = _U('processing', _U('opium')), sprite = 51, color = 60, callPolice = false, callPoliceChance = 100},
+			Dealer 			= {x = 1053.95, y = -3246.49, z = 5.89-1.0001, h = 45.24, name = _U('dealer', _U('opium')),	sprite = 500,	color = 75, callPolice = false, callPoliceChance = 100, NPCHash = 653210662, sellMin = 200, sellMax = 500, multiplierPolice = true},
 		}
 	},
 	-- Translated name

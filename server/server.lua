@@ -118,7 +118,11 @@ local function Sell(source, drug)
 				TriggerClientEvent('esx:showNotification', source, _U('not_enough', drug))
 			else
 				xPlayer.removeInventoryItem(v.ItemTransform, 1)
-				xPlayer.addAccountMoney('black_money', math.random( v.Zones.Dealer.multiplierPolice and v.Zones.Dealer.sellMin * CopsConnected or v.Zones.Dealer.sellMin, v.Zones.Dealer.multiplierPolice and v.Zones.Dealer.sellMax * CopsConnected or v.Zones.Dealer.sellMax))
+				if CopsConnected <= 1 then
+					xPlayer.addAccountMoney('black_money', math.random(v.Zones.Dealer.sellMin, v.Zones.Dealer.sellMax))
+				else
+					xPlayer.addAccountMoney('black_money', math.random( v.Zones.Dealer.sellMin * CopsConnected, v.Zones.Dealer.sellMax * CopsConnected))
+				end
 				TriggerClientEvent('esx:showNotification', source, _U('sold_one', drug))
 				Sell(source, drug)
 			end
