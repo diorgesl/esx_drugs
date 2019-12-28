@@ -83,6 +83,7 @@ AddEventHandler('esx_drugs:hasExitedMarker', function(zone)
 	TriggerServerEvent('esx_drugs:stopHarvest')
 	TriggerServerEvent('esx_drugs:stopTransform')
 	TriggerServerEvent('esx_drugs:stopSell')
+	ClearPedTasks(PlayerPedId())
 end)
 
 -- Drug effect
