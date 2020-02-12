@@ -1,0 +1,28 @@
+Locales['dk'] = {
+	['weed'] = 'Cannabis',
+	['meth'] = 'Metamfetamin',
+	['opium'] = 'Opium',
+	['coke'] = 'Kokain',
+	['press_collect'] = 'Tryk ~INPUT_CONTEXT~ for at høste ~r~%s~s~ planten. ',
+	['press_process'] = 'Tryk ~INPUT_CONTEXT~ for at høste ~r~%s~s~ planten.',
+	['press_sell'] = 'Tryk ~INPUT_CONTEXT~ for at sælge ~r~%s~s~',
+	['act_imp_police'] = 'Beklager, der er ikke nok politi til at gøre dette: ~o~%s~s~/~y~%s~s~ online',
+	['no_pouches_sale'] = 'Du har ikke nok ~r~Taske med stoffer~s~ at sælge',	
+	['pickup_in_prog'] = '~y~Du er igang med at høste~s~...',
+	['too_many_pouches'] = 'Din taske er ved at være fuld af ~r~Stoffer',
+	['packing_in_prog'] = '~y~Igang med at pakke~s~...',
+	['inv_full'] = 'Du har ikke mere plads i din taske til ~r~%s~s~, da din taske er fuld',
+	['not_enough'] = 'Du har ikke noget ~r~%s~s~',
+	['sold_one'] = 'Du sælger ~r~%s~s~',
+	['used_one'] = 'Du har taget ~r~1 stykke af ~r~%s~s~',
+	['sale_in_prog'] = '~g~Igang med at sælge~s~...',
+	['exit_marker'] = 'Tryk ~INPUT_CONTEXT~ for at annullere ~y~behandlingen.',
+	['foot_work'] = 'Du skal være på dine fødder for at arbejde.',
+	['act_call_police'] = ':RAPPORT: Mistænkt civil gør ulovlige ting!',
+	['stop_action'] = 'Tryk ~g~[%s]~w~ for at stoppe',
+	
+	-- Blips
+	['field'] = '%s Mark',
+	['processing'] = '%s Pakker',
+	['dealer'] = '%s Pusher',
+}
